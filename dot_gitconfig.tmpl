@@ -1,0 +1,16 @@
+[user]
+  name = {{ .git.name }}
+  email = {{ .git.email }}
+  signingkey = {{ .git.signingkey }}
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = {{ .git.ssh_program }}
+
+[init]
+  defaultBranch = main

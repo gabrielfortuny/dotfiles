@@ -1,0 +1,17 @@
+packages:
+  darwin:
+    brews:
+      - "git"
+      - "coreutils"
+      - "tree"
+    casks:
+      - "firefox"
+      - "1password"
+      - "1password-cli"
+      - "proton-mail"
+      - "proton-drive"
+      - "protonvpn"
+      - "visual-studio-code"
+      - "github"
+      - "signal"
+      - "spotify"

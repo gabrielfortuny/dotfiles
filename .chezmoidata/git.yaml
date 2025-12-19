@@ -1,0 +1,5 @@
+git:
+  name: "Gabriel Fortuny"
+  email: "92552031+gabrielfortuny@users.noreply.github.com"
+  signingkey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKVcJzc4o7OJqw8GDq/0dtAnN2/zKUDFO3/cUB3h2Gif"
+  ssh_program: "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"

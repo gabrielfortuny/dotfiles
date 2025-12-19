@@ -1,0 +1,7 @@
+edit:
+  command: "code"
+  args: ["--wait"]
+
+git:
+  authorName: "Gabriel Fortuny"
+  authorEmail: "92552031+gabrielfortuny@users.noreply.github.com"
