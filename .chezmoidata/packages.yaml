@@ -4,6 +4,7 @@ packages:
       - "git"
       - "coreutils"
       - "tree"
+      - "chezmoi"
     casks:
       - "firefox"
       - "1password"
