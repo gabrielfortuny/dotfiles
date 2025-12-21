@@ -9,9 +9,16 @@ Currently supports macOS.
 ## Bootstrap a new machine
 
 ```sh
+xcode-select --install
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gabrielfortuny
 ```
 
-- Sets up Homebrew and installs packages listed in [`.chezmoidata/packages.yaml`](.chezmoidata/packages.yaml).
-- Configures Git.
-- Configures SSH with [1Password](https://developer.1password.com/docs/ssh/).
+This will:
+
+- Install Xcode Command Line Tools (required for Homebrew)
+- Install chezmoi
+- Clone this repository
+- Apply all dotfiles and run setup scripts
+- Install Homebrew and packages listed in [`home/.chezmoidata/packages.yaml`](home/.chezmoidata/packages.yaml)
+- Configure Git
+- Configure SSH using [1Password](https://developer.1password.com/docs/ssh/)
