@@ -1,11 +1,9 @@
 #!/bin/sh
 set -e
 
-# Install Xcode CLT if missing
+# Check for Xcode CLT
 if ! xcode-select -p >/dev/null 2>&1; then
-  echo "Installing Xcode Command Line Tools..."
-  xcode-select --install
-  echo "Please complete the GUI installation and re-run 'chezmoi apply'."
+  echo "Please install Xcode Command Line Tools (xcode-select --install) and re-run the bootstrap command."
   exit 1
 fi
 
