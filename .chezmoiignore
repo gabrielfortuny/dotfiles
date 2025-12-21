@@ -1,11 +1,10 @@
 README.md
 .gitignore
-chezmoi.yaml
-.DS_Store
+.DS*Store
 .AppleDouble
 .LSOverride
 Icon
-._*
+.*_
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -18,4 +17,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-*.icloud
+_.icloud
