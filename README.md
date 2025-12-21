@@ -15,7 +15,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gabrielfortuny
 
 This will:
 
-- Install Xcode Command Line Tools (required for Homebrew)
+- Install Xcode Command Line Tools (required for chezmoi and Homebrew)
 - Install chezmoi
 - Clone this repository
 - Apply all dotfiles and run setup scripts
