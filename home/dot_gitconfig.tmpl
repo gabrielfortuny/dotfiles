@@ -1,7 +1,7 @@
 [user]
-  name = {{ .git.name }}
-  email = {{ .git.email }}
-  signingkey = {{ .git.signingkey }}
+  name = "{{ .git.name }}"
+  email = "{{ .git.email }}"
+  signingkey = "{{ .git.signingkey }}"
 
 [commit]
   gpgsign = true
@@ -10,13 +10,14 @@
   format = ssh
 
 [gpg "ssh"]
-  program = {{ .git.ssh_program }}
+  program = "{{ .git.ssh_program }}"
+  allowedSignersFile = ~/.ssh/allowed_signers
 
 [init]
   defaultBranch = main
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

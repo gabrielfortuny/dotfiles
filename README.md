@@ -1,24 +1,30 @@
 # dotfiles
 
-This repository contains my personal dotfiles, managed with [chezmoi](https://www.chezmoi.io/).
-
-See <https://www.chezmoi.io/user-guide/daily-operations/> for common usage instructions.
-
-Currently supports macOS.
+Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/). Currently supports macOS.
 
 ## Bootstrap a new machine
 
+First, install Xcode Command Line Tools (required for Homebrew):
+
 ```sh
 xcode-select --install
+```
+
+Then initialize chezmoi:
+
+```sh
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gabrielfortuny
 ```
 
 This will:
 
-- Install Xcode Command Line Tools (required for chezmoi and Homebrew)
 - Install chezmoi
 - Clone this repository
-- Apply all dotfiles and run setup scripts
-- Install Homebrew and packages listed in [`home/.chezmoidata/packages.yaml`](home/.chezmoidata/packages.yaml)
-- Configure Git
-- Configure SSH using [1Password](https://developer.1password.com/docs/ssh/)
+- Install Homebrew and packages from [`home/.chezmoidata/packages.yaml`](home/.chezmoidata/packages.yaml)
+- Configure Git with SSH commit signing via [1Password](https://developer.1password.com/docs/ssh/)
+- Configure SSH to use 1Password agent
+
+## Reference
+
+- [chezmoi daily operations](https://www.chezmoi.io/user-guide/daily-operations/)
+- [chezmoi command reference](https://www.chezmoi.io/reference/commands/)
