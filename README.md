@@ -13,7 +13,7 @@ xcode-select --install
 Then initialize chezmoi:
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply gabrielfortuny
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --purge-binary gabrielfortuny
 ```
 
 This will:
