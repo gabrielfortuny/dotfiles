@@ -1,0 +1,18 @@
+#!/bin/sh
+# Install VS Code extensions
+# vscode.yaml hash: {{ include ".chezmoidata/vscode.yaml" | sha256sum }}
+
+# Prefer the shell command, fall back to the full app bundle path so this
+# works immediately after cask install before the shell command is installed.
+if command -v code >/dev/null 2>&1; then
+  CODE="code"
+elif [ -x "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ]; then
+  CODE="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+else
+  echo "Warning: VS Code not found. Skipping extension installation."
+  exit 0
+fi
+
+{{ range .vscode.extensions -}}
+"$CODE" --install-extension {{ . | quote }}
+{{ end -}}
