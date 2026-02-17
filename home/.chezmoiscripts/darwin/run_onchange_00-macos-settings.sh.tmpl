@@ -187,8 +187,7 @@ for app in "Activity Monitor" \
 	"Dock" \
 	"Finder" \
 	"Photos" \
-	"SystemUIServer" \
-	"Terminal"; do
+	"SystemUIServer"; do
 	killall "${app}" &> /dev/null || true
 done
 
