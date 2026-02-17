@@ -6,6 +6,8 @@ set -euo pipefail
 # settings we're about to change
 osascript -e 'tell application "System Settings" to quit'
 
+echo "Applying macOS preferences"
+
 # Ask for the administrator password upfront
 sudo -v
 
