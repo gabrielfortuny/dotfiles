@@ -21,3 +21,9 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+
+[format]
+    pretty = "%C(yellow)%h%Creset%C(auto)%d%Creset %s %C(dim green)(%ar)%Creset %C(dim blue)<%an>%Creset"
+
+[log]
+    decorate = auto
