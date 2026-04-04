@@ -4,7 +4,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/). Currently sup
 
 ## Bootstrap a new machine
 
-First, install Xcode Command Line Tools (required for Homebrew):
+First, install Xcode Command Line Tools (required for chezmoi):
 
 ```sh
 xcode-select --install
