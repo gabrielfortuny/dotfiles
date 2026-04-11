@@ -1,6 +1,8 @@
 {{- /* Add Homebrew to PATH */ -}}
 {{- if eq .chezmoi.os "darwin" -}}
-if command -v brew >/dev/null 2>&1; then
-  eval "$(brew shellenv)"
-fi
+command -v brew >/dev/null 2>&1 || export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 {{- end }}
+{{- if eq .chezmoi.os "linux" -}}
+command -v brew >/dev/null 2>&1 || export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+{{- end }}
+command -v brew >/dev/null 2>&1 && eval "$(brew shellenv)"
